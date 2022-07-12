@@ -41,12 +41,12 @@ This example uses the mysql driver (https://github.com/go-sql-driver/mysql) to c
         }
 
         // Dump database to file
-        resultFilename, err := dumper.Dump()
+        err := dumper.Dump()
         if err != nil {
             fmt.Println("Error dumping:", err)
             return
         }
-        fmt.Printf("File is saved to %s", resultFilename)
+        fmt.Printf("File is saved to %s", dumper.FileName)
 
         // Close dumper, connected database and file stream.
         dumper.Close()

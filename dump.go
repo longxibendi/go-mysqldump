@@ -34,6 +34,7 @@ type Data struct {
 	tableTmpl  *template.Template
 	footerTmpl *template.Template
 	err        error
+	FileName   string
 }
 
 type table struct {
