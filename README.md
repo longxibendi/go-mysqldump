@@ -39,12 +39,12 @@ func main() {
   }
 
   // Dump database to file
-  err := dumper.Dump()
+  err = dumper.Dump()
   if err != nil {
     fmt.Println("Error dumping:", err)
     return
   }
-  fmt.Printf("File is saved to %s", dumpFilenameFormat)
+  fmt.Printf("File is saved to %s \n", dumper.FileName)
 
   // Close dumper, connected database and file stream.
   dumper.Close()
